@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page_title }} | Joshua & Allegra</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <header class="site-header">
+        <div class="hero">
+            <h1>Joshua & Allegra</h1>
+        </div>
+        <nav class="primary-nav">
+            <ul>
+                <li><a href="{{ url_for('home') }}" class="{{ 'active' if page_title == 'Home' else '' }}">Home</a></li>
+                <li><a href="{{ url_for('schedule') }}" class="{{ 'active' if page_title == 'Schedule' else '' }}">Schedule</a></li>
+                <li><a href="{{ url_for('faqs') }}" class="{{ 'active' if page_title == 'FAQs' else '' }}">FAQs</a></li>
+                <li><a href="{{ url_for('story') }}" class="{{ 'active' if page_title == 'Story' else '' }}">Our Story</a></li>
+                <li><a href="{{ url_for('rsvp') }}" class="cta {{ 'active' if page_title == 'RSVP' else '' }}">RSVP</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+        <p>Made with love by Allegra <3</p>
+    </footer>
+</body>
+</html>

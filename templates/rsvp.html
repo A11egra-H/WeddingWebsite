@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="page-heading">
+    <h2>RSVP</h2>
+    <p>Let us know if you can celebrate with us by July 15, 2025.</p>
+</section>
+
+<section class="rsvp-form">
+    <form action="#" method="post">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Jane Doe" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+        <label for="attendance">Will you be attending?</label>
+        <select id="attendance" name="attendance" required>
+            <option value="">Select an option</option>
+            <option value="accept">Joyfully accepts</option>
+            <option value="decline">Regretfully declines</option>
+        </select>
+
+        <label for="guests">Number of guests</label>
+        <input type="number" id="guests" name="guests" min="1" max="4" value="1">
+
+        <label for="notes">Dietary needs or notes</label>
+        <textarea id="notes" name="notes" rows="4" placeholder="Let us know how we can make you comfortable"></textarea>
+
+        <button type="submit">Send RSVP</button>
+    </form>
+</section>
+{% endblock %}

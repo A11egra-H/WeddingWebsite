@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="home-feature-image">
+    <img src="{{ url_for('static', filename='images/homepage.png') }}" alt="Joshua and Allegra" loading="lazy">
+</section>
+
+<section class="intro">
+    <h2>Welcome !</h2>
+    <p>We are so excited to celebrate with you. Please explore the site for wedding details.</p>
+</section>
+
+{% endblock %}
